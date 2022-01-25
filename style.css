@@ -1,0 +1,171 @@
+* {
+  font-family: "Red Hat Text", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(235, 16%, 14%);
+}
+
+img {
+  max-width: 100%;
+}
+
+.stars {
+  position: absolute;
+}
+
+.hills {
+  position: absolute;
+  bottom: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/***********
+Container */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  color: white;
+}
+
+.container h1 {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 50px;
+}
+
+/***********
+Countdown */
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.countdown div {
+  margin: 10px;
+}
+
+.countdown p {
+  width: 130px;
+  height: 92px;
+  line-height: 62px;
+  padding: 15px;
+  background-color: hsl(236, 21%, 26%);
+  color: hsl(345, 95%, 68%);
+  font-size: 46px;
+  border-radius: 5px;
+}
+
+.countdown h3 {
+  color: hsl(237, 18%, 57%);
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-top: 20px;
+}
+
+/***********
+Socials   */
+
+.socials {
+  width: 100vw;
+  position: absolute;
+  bottom: 50px;
+  z-index: 999;
+}
+
+.socials ul {
+  display: flex;
+  justify-content: center;
+}
+
+.socials ul li {
+  margin: 15px;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+/**************
+Media queries */
+
+@media (max-width: 1050px) {
+  .stars,
+  .hills {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .stars img,
+  .hills img {
+    width: 1050px;
+    max-width: none;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+
+@media (max-width: 650px) {
+  .container h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    padding: 0 10px;
+    margin-bottom: 100px;
+  }
+  .countdown p {
+    width: 60px;
+    height: 62px;
+    line-height: 42px;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 5px;
+  }
+
+  .countdown h3 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .stars img,
+  .hills img {
+    width: 1600px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .stars img,
+  .hills img {
+    width: 1920px;
+  }
+}
